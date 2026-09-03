@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>LEVEL UP — V1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- HOME -->
+  <main id="homePage" class="page active">
+    <h1>Welcome <span id="name">Feivel</span></h1>
+
+    <div class="quote">
+      <div>“<span id="quoteText">Everyday a different Motivation quote</span>”</div>
+      <div class="quote-author">- <span id="quoteAuthor">Author</span></div>
+    </div>
+
+    <!-- LEVEL UP GAME PANEL -->
+    <section class="game-panel">
+      <div class="level-row">
+        <div>
+          <div class="level-label">LEVEL</div>
+          <div class="level-number" id="level">1</div>
+        </div>
+
+        <div class="xp-area">
+          <div class="xp-numbers">
+            <span id="xp">0</span> / <span id="xpNeeded">500</span> XP
+          </div>
+          <div class="xp-bar">
+            <div id="xpFill"></div>
+          </div>
+        </div>
+
+        <div class="streak">
+          <div class="streak-number">🔥 <span id="streak">0</span></div>
+          <div>DAY STREAK</div>
+        </div>
+      </div>
+
+      <div class="mission-title">TODAY'S MISSIONS</div>
+      <div id="missions" class="mission-list"></div>
+    </section>
+
+    <div class="main-buttons">
+      <button class="game-button" data-page="schedule">Schedule</button>
+      <button class="game-button" data-page="gym">Gym</button>
+      <button class="game-button" data-page="soccer">Soccer</button>
+      <button class="game-button" data-page="nutrition">Nutrition</button>
+    </div>
+  </main>
+
+  <!-- SUB PAGES -->
+  <main id="schedulePage" class="page">
+    <h1>Schedule</h1>
+    <p class="page-subtitle">Plan your day and earn XP by completing it.</p>
+    <div class="placeholder-card">
+      <h2>Today's Schedule</h2>
+      <p>Schedule builder coming next.</p>
+    </div>
+    <button class="game-button back-button" data-page="home">Back</button>
+  </main>
+
+  <main id="gymPage" class="page">
+    <h1>Gym</h1>
+    <p class="page-subtitle">Train. Complete workouts. Earn XP.</p>
+    <div class="placeholder-card">
+      <h2>Workout</h2>
+      <p>Workout builder coming next.</p>
+    </div>
+    <button class="game-button back-button" data-page="home">Back</button>
+  </main>
+
+  <main id="soccerPage" class="page">
+    <h1>Soccer</h1>
+    <p class="page-subtitle">Build your player through training.</p>
+    <div class="placeholder-card">
+      <h2>Soccer Training</h2>
+      <p>Soccer skill tree and training coming next.</p>
+    </div>
+    <button class="game-button back-button" data-page="home">Back</button>
+  </main>
+
+  <main id="nutritionPage" class="page">
+    <h1>Nutrition</h1>
+    <p class="page-subtitle">Track meals and build your nutrition level.</p>
+    <div class="placeholder-card">
+      <h2>Nutrition</h2>
+      <p>Manual nutrition logging and food scanner coming next.</p>
+    </div>
+    <button class="game-button back-button" data-page="home">Back</button>
+  </main>
+
+  <footer>LEVEL UP <span>V1.0</span></footer>
+</div>
+
+<!-- LEVEL UP POPUP -->
+<div id="levelUpPopup" class="overlay">
+  <div class="levelup-box">
+    <div class="star">★</div>
+    <div class="popup-small">PLAYER LEVEL</div>
+    <h2>LEVEL UP!</h2>
+    <div id="popupLevel">LEVEL 2</div>
+    <p>+1 Skill Point unlocked</p>
+    <button id="continueButton" class="game-button">Continue</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
